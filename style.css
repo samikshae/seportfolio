@@ -138,8 +138,8 @@ body {
 
 /* PROFILE IMAGE */
 .profile-img {
-  width: 180px;          /* fixed width */
-  height: 180px;         /* fixed height, must match width */
+  width: 250px;          /* fixed width */
+  height: 250px;         /* fixed height, must match width */
   border-radius: 50%;    /* circle! */
   object-fit: cover;     /* ensures the image fills the circle */
   border: 4px solid #64ffda;  /* optional accent border */
@@ -155,9 +155,9 @@ body {
   }
 
   .profile-img {
-    width: 140px;
-    height: 140px;
-  }
+    width: 180px;   /* smaller on mobile */
+    height: 180px;
+}
 }
 
 
