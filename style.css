@@ -197,53 +197,36 @@ body {
     width: 200px;
     height: 200px;
   }
-  .orbit {
-    display: none;
-  }
 }
 
-.orbit-container {
+/* ===== Curved rotating skill text ===== */
+
+.orbit-wrapper {
   position: relative;
   width: 360px;
   height: 360px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.orbit {
+.orbit-text {
   position: absolute;
   width: 420px;
   height: 420px;
-  border-radius: 50%;
-  animation: spin 22s linear infinite;
+  animation: rotateText 28s linear infinite;
   pointer-events: none;
 }
 
-.orbit-container:hover .orbit {
-  animation-play-state: paused;
+.orbit-text text {
+  fill: #64ffda;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  filter: drop-shadow(0 0 6px rgba(100, 255, 218, 0.35));
 }
 
-.orbit span {
-  position: absolute;
-  background: rgba(100, 255, 218, 0.12);
-  color: #64ffda;
-  padding: 6px 12px;
-  font-size: 0.75rem;
-  border-radius: 999px;
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(100, 255, 218, 0.3);
-  white-space: nowrap;
-}
-
-/* Evenly spaced positions */
-.orbit span:nth-child(1) { top: -8px; left: 50%; transform: translateX(-50%); }
-.orbit span:nth-child(2) { right: -12px; top: 50%; transform: translateY(-50%); }
-.orbit span:nth-child(3) { bottom: -8px; left: 50%; transform: translateX(-50%); }
-.orbit span:nth-child(4) { left: -12px; top: 50%; transform: translateY(-50%); }
-.orbit span:nth-child(5) { top: 10%; right: 10%; }
-
-@keyframes spin {
+@keyframes rotateText {
   from {
     transform: rotate(0deg);
   }
@@ -252,3 +235,14 @@ body {
   }
 }
 
+/* Pause rotation on hover */
+.orbit-wrapper:hover .orbit-text {
+  animation-play-state: paused;
+}
+
+/* Hide on mobile */
+@media screen and (max-width: 768px) {
+  .orbit-text {
+    display: none;
+  }
+}

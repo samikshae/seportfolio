@@ -36,18 +36,31 @@
   </a>
 </div>
 <div class="hero-image fade-right">
-  <div class="orbit-container">
+  <div class="orbit-wrapper">
+
     <img src="images/profile.jpg" alt="My Profile" class="profile-img">
 
-    <div class="orbit orbit-1">
-      <span>SolidWorks</span>
-      <span>MATLAB</span>
-      <span>Python</span>
-      <span>CAD</span>
-      <span>FEA</span>
-    </div>
+    <svg class="orbit-text" viewBox="0 0 400 400">
+      <defs>
+        <path
+          id="circlePath"
+          d="M 200,200
+             m -160,0
+             a 160,160 0 1,1 320,0
+             a 160,160 0 1,1 -320,0"
+        />
+      </defs>
+
+      <text>
+        <textPath href="#circlePath" startOffset="0%">
+          SolidWorks • MATLAB • Python • CAD • FEA • Prototyping •
+        </textPath>
+      </text>
+    </svg>
+
   </div>
 </div>
+
 
 
 
