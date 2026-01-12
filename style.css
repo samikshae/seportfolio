@@ -245,3 +245,26 @@ body {
   }
 }
 
+/* ENTRY ANIMATIONS */
+.fade-left,
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeIn 0.9s ease-out forwards;
+}
+
+.fade-right {
+  transform: translateX(-40px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-content,
+.hero-image {
+  will-change: opacity, transform;
+}
