@@ -59,6 +59,10 @@ body {
   color: #64ffda;
 }
 
+.navbar, .navbar .logo, .nav-links a {
+  font-size: 1.4rem !important;
+}
+
 /* HERO SECTION */
 .hero {
   min-height: calc(100vh - 80px);
