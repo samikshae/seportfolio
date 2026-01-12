@@ -88,7 +88,7 @@ body {
 .hero {
   min-height: calc(100vh - 80px); /* full screen minus navbar */
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -98,6 +98,7 @@ body {
 
 .hero-content {
   max-width: 520px;
+  padding-left: 40px;
 }
 
 
@@ -121,21 +122,23 @@ body {
   font-weight: 400;
   color: #a8b2d1;
   line-height: 1.6;
+  margin-top: 12px;
 }
 
-.subtitle span {
+/*.subtitle span {
   font-weight: 600;
   color: #64ffda;
   display: block;
   margin-top: 4px;
   
-}
+}*/
 
 
 
 /* ACCENT */
 .accent {
   color: #64ffda;
+  font-weight: 600;
 }
 
 /* HERO IMAGE CONTAINER */
@@ -200,4 +203,26 @@ body {
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(100, 255, 218, 0.35);
+}
+
+.typing-cursor::after {
+  content: '|';
+  margin-left: 4px;
+  animation: blink 1s infinite;
+}
+
+#typing-text {
+  color: #a8b2d1;
+  font-weight: 400;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Cursor disappears after typing */
+#typing-text.done::after {
+  display: none;
 }
