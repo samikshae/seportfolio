@@ -88,7 +88,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 40px;
-  gap: 60px;
+  gap: 100px;
 }
 
 .hero-content {
@@ -96,6 +96,7 @@ body {
   text-align: left;
   margin-left: 40px;  /* shifts text to the right */
 }
+
 
 /* TEXT SIDE */
 .hero-content h1 {
