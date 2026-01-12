@@ -230,4 +230,18 @@ body {
 #typing-line-1,
 #typing-line-2 {
   display: inline-block;
+  min-height: 1.4em;
 }
+
+.typing-cursor::after {
+  content: '|';
+  margin-left: 3px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
