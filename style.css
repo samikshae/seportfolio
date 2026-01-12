@@ -1,47 +1,52 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
+/* PAGE */
 body {
   background-color: #0a192f;
   color: #ccd6f6;
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;
   background-color: #020c1b;
+  padding: 16px 32px;
 }
 
+/* LOGO */
 .logo {
-  font-weight: bold;
   color: #64ffda;
+  font-size: 20px;
+  font-weight: bold;
 }
 
+/* NAV LINKS */
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  list-style: none;        /* REMOVES BULLETS */
+  display: flex;           /* MAKES ROW */
+  gap: 24px;
+}
+
+.nav-links li {
+  display: inline;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #ccd6f6;
-  transition: color 0.3s;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+/* HOVER EFFECT */
+.nav-links a:hover {
   color: #64ffda;
-}
-
-/* Page content */
-.page {
-  padding: 4rem 2rem;
 }
