@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const line2 = document.getElementById("typing-line-2");
 
   const typingSpeed = 40;
-  const animationDuration = 900; // must match CSS animation time
+  const animationDuration = 900;
 
   let i = 0;
   let j = 0;
@@ -14,26 +14,26 @@ document.addEventListener("DOMContentLoaded", () => {
   function typeLine1() {
     if (i < line1Text.length) {
       line1.textContent += line1Text[i++];
-      setTimeout(typeLine1, typingSpeed);
+      requestAnimationFrame(() => setTimeout(typeLine1, typingSpeed));
     } else {
       line1.classList.remove("typing-cursor");
       line2.classList.add("typing-cursor");
-      typeLine2();
+      requestAnimationFrame(typeLine2);
     }
   }
 
   function typeLine2() {
     if (j < line2Text.length) {
       line2.textContent += line2Text[j++];
-      setTimeout(typeLine2, typingSpeed);
+      requestAnimationFrame(() => setTimeout(typeLine2, typingSpeed));
     } else {
       line2.classList.remove("typing-cursor");
     }
   }
 
-  // Start typing AFTER fade animations complete
+  // start typing after fade animations
   setTimeout(() => {
     line1.classList.add("typing-cursor");
     typeLine1();
-  }, animationDuration + 200);
+  }, animationDuration);
 });

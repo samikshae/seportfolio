@@ -3,13 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-* {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
-
 
 /* PAGE */
 body {
@@ -17,21 +12,6 @@ body {
   color: #ccd6f6;
   padding-top: 80px;
 }
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  z-index: 1000;
-}
-
-/* LOGO 
-.logo {
-  color: #64ffda;
-  font-size: 20px;
-  font-weight: bold;
-}*/
 
 /* NAVBAR */
 .navbar {
@@ -48,14 +28,12 @@ body {
   backdrop-filter: blur(10px);
 }
 
-/* LOGO */
 .logo {
   font-size: 1.4rem;
   font-weight: 700;
   color: #64ffda;
 }
 
-/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
@@ -71,22 +49,19 @@ body {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-/* HOVER = BUTTON FEEL */
 .nav-links a:hover {
   background: rgba(100, 255, 218, 0.1);
   color: #64ffda;
 }
 
-/* ACTIVE PAGE */
 .nav-links a.active {
   background: rgba(100, 255, 218, 0.15);
   color: #64ffda;
 }
 
-
 /* HERO SECTION */
 .hero {
-  min-height: calc(100vh - 80px); /* full screen minus navbar */
+  min-height: calc(100vh - 80px);
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   align-items: center;
@@ -100,7 +75,6 @@ body {
   max-width: 520px;
   padding-left: 40px;
 }
-
 
 .hero-content h1 {
   font-size: 1.5rem;
@@ -125,65 +99,28 @@ body {
   margin-top: 12px;
 }
 
-/*.subtitle span {
-  font-weight: 600;
-  color: #64ffda;
-  display: block;
-  margin-top: 4px;
-  
-}*/
-
-
-
 /* ACCENT */
 .accent {
   color: #64ffda;
   font-weight: 600;
 }
 
-/* HERO IMAGE CONTAINER */
-/* HERO IMAGE CONTAINER */
+/* HERO IMAGE */
 .hero-image {
-  display: flex;           /* prevents grid from stretching image */
-  justify-content: center; /* centers horizontally */
-  align-items: flex-start;    /* centers vertically */
-  height: auto;            /* let the image control height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
 }
 
-/* PROFILE IMAGE */
 .profile-img {
-  width: 350px;           /* bigger size */
-  height: 350px;          /* must match width for perfect circle */
-  border-radius: 50%;     /* circular shape */
-  object-fit: cover;      /* keeps proportions correct */
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
   border: 4px solid #64ffda;
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  max-width: 100%;        /* prevents overflow on small screens */
-  transform: translateY(-10px);
-}
-
-
-
-@media screen and (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr; /* stack text and image */
-    text-align: center;
-    gap: 40px;
-  }
-
-  .profile-img {
-    width: 200px;  /* smaller circle on mobile */
-    height: 200px;
-  }
-}
-
-
-
-
-.page-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 140px 40px;
+  max-width: 100%;
 }
 
 /* CTA BUTTON */
@@ -205,34 +142,7 @@ body {
   box-shadow: 0 10px 25px rgba(100, 255, 218, 0.35);
 }
 
-.typing-cursor::after {
-  content: '|';
-  margin-left: 4px;
-  animation: blink 1s infinite;
-}
-
-#typing-text {
-  color: #a8b2d1;
-  font-weight: 400;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-/* Cursor disappears after typing */
-#typing-text.done::after {
-  display: none;
-}
-
-#typing-line-1,
-#typing-line-2 {
-  display: inline-block;
-  min-height: 1.4em;
-}
-
+/* TYPING EFFECT */
 .typing-cursor::after {
   content: '|';
   margin-left: 3px;
@@ -245,16 +155,23 @@ body {
   }
 }
 
-/* ENTRY ANIMATIONS */
-.fade-left,
-.fade-right {
+/* typing lines */
+.typing-line-block {
+  display: block;
+  min-height: 1.4em; /* ensures layout doesn't shift */
+}
+
+/* FADE IN ANIMATIONS */
+.fade-left {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(-40px);
   animation: fadeIn 0.9s ease-out forwards;
 }
 
 .fade-right {
-  transform: translateX(-40px);
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeIn 0.9s ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -264,7 +181,16 @@ body {
   }
 }
 
-.hero-content,
-.hero-image {
-  will-change: opacity, transform;
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
 }
