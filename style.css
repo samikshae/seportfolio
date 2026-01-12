@@ -226,3 +226,8 @@ body {
 #typing-text.done::after {
   display: none;
 }
+
+#typing-line-1,
+#typing-line-2 {
+  display: inline-block;
+}
