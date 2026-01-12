@@ -28,28 +28,56 @@ body {
   font-weight: bold;
 }
 
-/* NAV LINKS */
-.nav-links {
-  list-style: none;        /* REMOVES BULLETS */
-  display: flex;           /* MAKES ROW */
-  gap: 24px;
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(2, 12, 27, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
-.nav-links li {
-  display: inline;
+/* LOGO */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #64ffda;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 12px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #ccd6f6;
-  font-size: 16px;
-  transition: color 0.3s ease;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
-/* HOVER EFFECT */
+/* HOVER = BUTTON FEEL */
 .nav-links a:hover {
+  background: rgba(100, 255, 218, 0.1);
   color: #64ffda;
 }
+
+/* ACTIVE PAGE */
+.nav-links a.active {
+  background: rgba(100, 255, 218, 0.15);
+  color: #64ffda;
+}
+
 
 /* HERO SECTION */
 .hero {
@@ -75,10 +103,12 @@ body {
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #8892b0;
-  margin-top: 10px;
+  margin-top: 16px;
+  line-height: 1.6;
 }
+
 
 /* ACCENT */
 .accent {
