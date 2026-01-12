@@ -128,14 +128,14 @@ body {
   color: #64ffda;
 }
 
-/* IMAGE SIDE */
+/* IMAGE SIDE 
 .hero-image img {
   width: 100%;
   max-width: 400px;
   display: block;
   margin-left: auto;
 }
-
+*/
 .page-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -159,4 +159,15 @@ body {
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(100, 255, 218, 0.35);
+}
+
+.profile-img {
+  width: 150px;       /* adjust size as needed */
+  height: 150px;      /* keep it same as width for a perfect circle */
+  border-radius: 50%; /* makes it a circle */
+  object-fit: cover;  /* ensures the image fills the circle nicely */
+  border: 3px solid #fff; /* optional: adds a border around it */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* optional: adds a subtle shadow */
+  display: block;
+  margin: 20px auto;  /* centers it horizontally */
 }
