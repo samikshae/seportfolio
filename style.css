@@ -6,6 +6,11 @@
   font-family: Arial, sans-serif;
 }
 
+* {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+
 /* PAGE */
 body {
   background-color: #0a192f;
@@ -87,40 +92,43 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 40px;
-  gap: 100px;
+  padding: 64px 40px;
+  gap: 80px;
 }
 
 .hero-content {
   max-width: 520px;
-  text-align: left;
-  margin-left: 40px;  /* shifts text to the right */
 }
 
 
-/* TEXT SIDE */
 .hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #8892b0;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
 }
 
 .hero-content h2 {
-  font-size: 3rem;
-  margin-bottom: 15px;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 24px;
 }
 
 .subtitle {
-  font-size: 1.6rem;      /* noticeably bigger */
-  font-weight: 500;
-  color: #ccd6f6;
-  margin-top: 22px;
-  line-height: 1.5;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #a8b2d1;
+  line-height: 1.6;
 }
 
 .subtitle span {
-  font-size: 1.6rem;
-  font-weight: 700;       /* POP */
-  color: #64ffda;         /* accent color */
+  font-weight: 600;
+  color: #64ffda;
+  display: block;
+  margin-top: 4px;
+  
 }
 
 
@@ -135,7 +143,7 @@ body {
 .hero-image {
   display: flex;           /* prevents grid from stretching image */
   justify-content: center; /* centers horizontally */
-  align-items: center;     /* centers vertically */
+  align-items: flex-start;    /* centers vertically */
   height: auto;            /* let the image control height */
 }
 
@@ -148,6 +156,7 @@ body {
   border: 4px solid #64ffda;
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
   max-width: 100%;        /* prevents overflow on small screens */
+  transform: translateY(-10px);
 }
 
 
@@ -177,13 +186,13 @@ body {
 /* CTA BUTTON */
 .cta-button {
   display: inline-block;
-  margin-top: 28px;
-  padding: 14px 28px;
-  font-size: 1rem;
+  margin-top: 32px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  border-radius: 8px;
   font-weight: 600;
   color: #020c1b;
   background: #64ffda;
-  border-radius: 10px;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
