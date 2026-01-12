@@ -1,3 +1,4 @@
+console.log("script.js loaded");
 document.addEventListener("DOMContentLoaded", () => {
   const line1 = "Mechanical Engineering Student";
   const line2 = "@ Cornell University";
