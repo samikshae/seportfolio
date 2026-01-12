@@ -94,6 +94,7 @@ body {
 .hero-content {
   max-width: 520px;
   text-align: left;
+  margin-left: 40px;  /* shifts text to the right */
 }
 
 /* TEXT SIDE */
