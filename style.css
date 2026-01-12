@@ -137,8 +137,8 @@ body {
 
 /* PROFILE IMAGE */
 .profile-img {
-  width: 250px;           /* new bigger size */
-  height: 250px;          /* must match width for circle */
+  width: 350px;           /* new bigger size */
+  height: 350px;          /* must match width for circle */
   border-radius: 50%;     /* circular */
   object-fit: cover;      /* keeps photo proportion */
   border: 4px solid #64ffda;  
