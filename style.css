@@ -337,7 +337,7 @@ section.visible {
   padding-right: 5%;
   font-size: 1.1rem;
   line-height: 1.6;
-  transform: translateY(-20px);
+  transform: translateY(-10px);
 }
 
 #quote-wrapper {
