@@ -127,7 +127,7 @@ body {
   box-shadow:
     0 0 12px rgba(100, 255, 218, 0.25),
     0 0 24px rgba(100, 255, 218, 0.15);
-  animation: glowPulse 4s ease-in-out infinite;
+  animation: glowPulse 4.5s ease-in-out infinite;
 }
 
 /* CTA BUTTON */
