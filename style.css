@@ -330,7 +330,7 @@ section.visible {
 #about-section {
   position: relative;
   align-items: stretch; /* instead of center */
-  padding-top: 80px;       /* adjust as needed */
+  padding-top: 120px;       /* adjust as needed */
 }
 
 #about-text {
@@ -346,6 +346,7 @@ section.visible {
   justify-content: center;
   align-items: center;   /* THIS now works */
   padding-bottom: 40px;  /* subtle visual balance */
+  transform: translateY(40px);
 }
 
 
