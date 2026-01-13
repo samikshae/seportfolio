@@ -201,6 +201,7 @@ body {
   object-fit: cover;
   border: 4px solid #64ffda;
   z-index: 2; /* stays above orbit */
+  animation: glowPulse 3s ease-in-out infinite;
 }
 }
 
@@ -247,6 +248,24 @@ body {
 @media (max-width: 1024px) {
   .hero-image {
     transform: none;
+    overflow: visible;
   }
 }
 
+@keyframes glowPulse {
+  0% {
+    box-shadow:
+      0 0 20px rgba(100, 255, 218, 0.4),
+      0 0 40px rgba(100, 255, 218, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 35px rgba(100, 255, 218, 0.7),
+      0 0 70px rgba(100, 255, 218, 0.4);
+  }
+  100% {
+    box-shadow:
+      0 0 20px rgba(100, 255, 218, 0.4),
+      0 0 40px rgba(100, 255, 218, 0.2);
+  }
+}
