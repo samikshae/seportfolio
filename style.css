@@ -310,15 +310,16 @@ body {
 
 /* Sections fade-in on scroll */
 section {
-  padding: 100px 10%;
-  min-height: 100vh;
+  padding: 120px 10%;
+  min-height: auto; /* IMPORTANT */
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* align to top */
   justify-content: space-between;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
 }
+
 
 section.visible {
   opacity: 1;
@@ -341,39 +342,44 @@ section.visible {
 }
 
 #quote-wrapper {
-  flex: 1; /* optional, keeps space on the right */
+  flex: 1;
   display: flex;
-  justify-content: center; /* horizontally center the quote */
-  align-items: center;     /* vertically center */
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px; /* KEY LINE */
 }
+
 
 #quote-container {
   position: relative;      /* for circle positioning */
   text-align: center;
-  padding: 0;              /* remove extra padding */
+  padding: 0;      
+  max-width: 280px;        /* remove extra padding */
 }
 
+/* Circle */
 #quote-container::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateY(90px);
-  width: 250px;
-  height: 250px;
+  transform: translate(-50%, -50%);
+  width: 300px;   /* slightly bigger = fills space */
+  height: 300px;
   border-radius: 50%;
-  background: rgba(100, 201, 255, 0.15);
+  background: rgba(100, 201, 255, 0.12);
   z-index: -1;
+  filter: blur(1px);
 }
+
 
 #quote-text {
   font-style: italic;
   font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  transform: translateY(90px);
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
+
 
 
 /* Skills section */
