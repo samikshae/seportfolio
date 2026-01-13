@@ -359,7 +359,7 @@ section.visible {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateY(30px);
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -372,6 +372,7 @@ section.visible {
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.5;
+  transform: translateY(30px);
 }
 
 
