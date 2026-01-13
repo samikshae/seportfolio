@@ -172,7 +172,7 @@ body {
 .fade-left {
   opacity: 0;
   transform: translateX(-40px);
-  animation: fadeIn 0.9s ease-out forwards;
+  animation: fadeIn 1.1s ease-out forwards;
 }
 
 .fade-right {
