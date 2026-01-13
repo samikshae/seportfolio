@@ -208,8 +208,8 @@ body {
 
 .orbit-wrapper {
   position: relative;
-  width: 420px;
-  height: 420px;
+  width: 460px;
+  height: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,8 +218,8 @@ body {
 
 .orbit-text {
   position: absolute;
-  width: 420px;
-  height: 420px;
+  width: 460px;
+  height: 460px;
   animation: rotateText 36s linear infinite;
   pointer-events: none;
 }
