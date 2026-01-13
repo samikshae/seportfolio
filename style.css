@@ -113,7 +113,7 @@ body {
 .hero-image {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: auto;
 }
 
@@ -194,46 +194,48 @@ body {
   }
 
   .profile-img {
-    width: 200px;
-    height: 200px;
-  }
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #64ffda;
+  z-index: 2; /* stays above orbit */
+}
 }
 
 /* ===== Curved rotating skill text ===== */
 
+
 .orbit-wrapper {
   position: relative;
-  width: 360px;
-  height: 360px;
+  width: 420px;
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+
 .orbit-text {
   position: absolute;
   width: 420px;
   height: 420px;
-  animation: rotateText 28s linear infinite;
+  animation: rotateText 36s linear infinite;
   pointer-events: none;
 }
 
 .orbit-text text {
-  fill: #64ffda;
+  fill: #64ffda; /* blue accent */
   font-size: 14px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-weight: 500;
-  filter: drop-shadow(0 0 6px rgba(100, 255, 218, 0.35));
 }
 
 @keyframes rotateText {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
+
 
 /* Pause rotation on hover */
 .orbit-wrapper:hover .orbit-text {
