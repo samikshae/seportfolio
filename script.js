@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const line1Text = "Mechanical Engineering Student";
+  const line1Text = "Mechanical & Aerospace Engineering";
   const line2Text = "@ Cornell University";
 
   const line1 = document.getElementById("typing-line-1");
