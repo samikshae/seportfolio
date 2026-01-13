@@ -267,7 +267,7 @@ body {
   }
 }
 
-/* ================= STARFIELD BACKGROUND (UPDATED) ================= */
+/* ================= STARFIELD - DENSE & VISIBLE ================= */
 
 .stars, .stars2, .stars3 {
   position: fixed;
@@ -281,50 +281,8 @@ body {
   background: transparent;
 }
 
-.stars::after,
-.stars2::after,
-.stars3::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1.5px;
-  height: 1.5px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 
-    /* stars layer 1: lots of small dim stars */
-    50px 100px white, 120px 250px white, 200px 50px white, 300px 400px white,
-    400px 150px white, 500px 350px white, 600px 100px white, 700px 500px white,
-    800px 200px white, 900px 450px white, 1000px 300px white, 1100px 600px white,
-    1200px 400px white, 1300px 150px white, 1400px 550px white, 1500px 250px white,
-    1600px 700px white, 1700px 350px white, 1800px 100px white, 1900px 500px white,
-    2000px 300px white, 2100px 650px white, 2200px 200px white, 2300px 400px white,
-    2400px 150px white, 2500px 500px white, 2600px 300px white, 2700px 700px white,
-    2800px 100px white, 2900px 450px white;
-  animation: twinkle 7s ease-in-out infinite;
-  opacity: 0.3;
-}
-
-.stars2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1.5px;
-  height: 1.5px;
-  background: white;
-  border-radius: 50%;
-  box-shadow:
-    80px 200px white, 180px 400px white, 280px 120px white, 380px 500px white,
-    480px 300px white, 580px 650px white, 680px 150px white, 780px 450px white,
-    880px 250px white, 980px 550px white, 1080px 350px white, 1180px 600px white,
-    1280px 200px white, 1380px 500px white, 1480px 300px white;
-  animation: twinkle 9s ease-in-out infinite;
-  opacity: 0.25;
-}
-
-.stars3::after {
+/* Layer 1: lots of small bright stars */
+.stars::after {
   content: "";
   position: absolute;
   top: 0;
@@ -334,20 +292,61 @@ body {
   background: white;
   border-radius: 50%;
   box-shadow:
-    150px 250px white, 350px 450px white, 550px 150px white, 750px 650px white,
-    950px 350px white, 1150px 550px white, 1350px 200px white, 1550px 500px white,
-    1750px 300px white, 1950px 700px white;
-  animation: twinkle 11s ease-in-out infinite;
-  opacity: 0.2;
+    50px 100px white, 120px 250px white, 200px 50px white, 300px 400px white,
+    400px 150px white, 500px 350px white, 600px 100px white, 700px 500px white,
+    800px 200px white, 900px 450px white, 1000px 300px white, 1100px 600px white,
+    1200px 400px white, 1300px 150px white, 1400px 550px white, 1500px 250px white,
+    1600px 700px white, 1700px 350px white, 1800px 100px white, 1900px 500px white,
+    2000px 300px white, 2100px 650px white, 2200px 200px white, 2300px 400px white,
+    2400px 150px white, 2500px 500px white, 2600px 300px white, 2700px 700px white,
+    2800px 100px white, 2900px 450px white, 3000px 600px white, 3100px 350px white,
+    3200px 200px white, 3300px 500px white, 3400px 100px white, 3500px 400px white;
+  animation: twinkle 6s ease-in-out infinite;
+  opacity: 0.45;
 }
 
+/* Layer 2: medium stars, slower twinkle */
+.stars2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5px;
+  height: 2.5px;
+  background: white;
+  border-radius: 50%;
+  box-shadow:
+    80px 200px white, 180px 400px white, 280px 120px white, 380px 500px white,
+    480px 300px white, 580px 650px white, 680px 150px white, 780px 450px white,
+    880px 250px white, 980px 550px white, 1080px 350px white, 1180px 600px white,
+    1280px 200px white, 1380px 500px white, 1480px 300px white, 1580px 700px white,
+    1680px 400px white, 1780px 150px white;
+  animation: twinkle 9s ease-in-out infinite;
+  opacity: 0.35;
+}
+
+/* Layer 3: bigger stars, slowest twinkle */
+.stars3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  box-shadow:
+    150px 250px white, 350px 450px white, 550px 150px white, 750px 650px white,
+    950px 350px white, 1150px 550px white, 1350px 200px white, 1550px 500px white,
+    1750px 300px white, 1950px 700px white, 2150px 400px white, 2350px 600px white;
+  animation: twinkle 11s ease-in-out infinite;
+  opacity: 0.25;
+}
+
+/* Twinkle animation */
 @keyframes twinkle {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.7;
-  }
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
 }
 
 /* Mobile scaling */
