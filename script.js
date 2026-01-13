@@ -37,3 +37,30 @@ document.addEventListener("DOMContentLoaded", () => {
     typeLine1();
   }, animationDuration);
 });
+
+function generateStars(selector, count) {
+  const element = document.querySelector(selector);
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  let shadows = [];
+  for (let i = 0; i < count; i++) {
+    const x = Math.floor(Math.random() * width);
+    const y = Math.floor(Math.random() * height);
+    shadows.push(`${x}px ${y}px white`);
+  }
+  element.style.boxShadow = shadows.join(', ');
+}
+
+// Generate stars for all layers
+function initStars() {
+  generateStars('.stars', 300);   // Layer 1: small bright stars
+  generateStars('.stars2', 200);  // Layer 2: medium stars
+  generateStars('.stars3', 150);  // Layer 3: big stars
+}
+
+// Initialize on page load
+window.addEventListener("load", initStars);
+
+// Re-generate stars when window is resized
+window.addEventListener("resize", initStars);
