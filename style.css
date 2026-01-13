@@ -353,7 +353,7 @@ section.visible {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background: rgba(100, 200, 255, 0.05);
+  background: rgba(100, 201, 255, 0.324);
   z-index: -1;
 }
 
