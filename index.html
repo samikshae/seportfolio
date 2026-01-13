@@ -21,10 +21,7 @@
     </ul>
   </nav>
 
-<div class="stars"></div>
-<div class="stars stars2"></div>
-<div class="stars stars3"></div>
-
+<div id="tsparticles"></div>
 
   <main class="hero">
   <div class="hero-content fade-left">
@@ -78,6 +75,42 @@
 
   <script src="./script.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+<script>
+tsParticles.load("tsparticles", {
+  background: {
+    color: "#0a192f"
+  },
+  particles: {
+    number: {
+      value: 400,        // ⭐ MORE STARS
+      density: {
+        enable: true,
+        area: 800
+      }
+    },
+    color: {
+      value: "#ffffff"
+    },
+    opacity: {
+      value: { min: 0.3, max: 1 },
+      animation: {
+        enable: true,
+        speed: 0.6,      // ⭐ PULSING SPEED
+        minimumValue: 0.3,
+        sync: false
+      }
+    },
+    size: {
+      value: { min: 1, max: 2.5 }
+    },
+    move: {
+      enable: true,
+      speed: 0.15       // ⭐ subtle drift
+    }
+  }
+});
+</script>
 
 </body>
 </html>
