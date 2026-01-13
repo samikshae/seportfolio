@@ -37,5 +37,3 @@ document.addEventListener("DOMContentLoaded", () => {
     typeLine1();
   }, animationDuration);
 });
-
-console.log(tsParticles);
