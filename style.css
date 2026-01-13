@@ -227,8 +227,8 @@ body {
 
 .orbit-text text {
   fill: #64ffda; /* blue accent */
-  font-size: 14px;
-  letter-spacing: 3px;
+  font-size: 16px;
+  letter-spacing: 4px;
   font-weight: 500;
 }
 
