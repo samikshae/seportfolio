@@ -358,7 +358,7 @@ section.visible {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background: rgba(100, 201, 255, 0.333); /* slightly lighter for visibility */
+  background: rgba(100, 201, 255, 0.191); /* slightly lighter for visibility */
   z-index: -1;
 }
 
