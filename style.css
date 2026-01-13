@@ -329,8 +329,8 @@ section.visible {
 /* About + Quote layout */
 #about-section {
   position: relative;
-  align-items: flex-start; /* instead of center */
-  padding-top: 200px;       /* adjust as needed */
+  align-items: stretch; /* instead of center */
+  padding-top: 140px;       /* adjust as needed */
 }
 
 #about-text {
@@ -338,7 +338,6 @@ section.visible {
   padding-right: 5%;
   font-size: 1.1rem;
   line-height: 1.6;
-  transform: translateY(40px);
 }
 
 #quote-wrapper {
@@ -347,7 +346,7 @@ section.visible {
   justify-content: center;
   align-items: center;   /* THIS now works */
   padding-bottom: 40px;  /* subtle visual balance */
-  transform: translateY(90px);
+  transform: translateY(40px);
 }
 
 
@@ -394,4 +393,5 @@ section.visible {
     width: 200px;
     height: 200px;
   }
+
 }
