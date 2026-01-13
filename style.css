@@ -7,14 +7,10 @@
 }
 
 /* PAGE */
-html {
+body {
   background-color: #0a192f;
   color: #ccd6f6;
   padding-top: 80px;
-}
-
-body{
-  background: transparent
 }
 
 /* NAVBAR */
@@ -271,39 +267,106 @@ body{
   }
 }
 
+/* ================= STARFIELD BACKGROUND ================= */
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  opacity: 0.6;
+  box-shadow:
+    100px 200px white,
+    200px 400px white,
+    300px 100px white,
+    400px 600px white,
+    500px 300px white,
+    600px 700px white,
+    700px 200px white,
+    800px 500px white,
+    900px 100px white,
+    1000px 600px white,
+    1100px 300px white,
+    1200px 700px white,
+    1300px 200px white,
+    1400px 500px white,
+    1500px 100px white,
+    1600px 600px white,
+    1700px 300px white,
+    1800px 700px white;
+  animation: twinkle 7s ease-in-out infinite;
+}
+
+.stars2::after {
+  opacity: 0.45;
+  box-shadow:
+    150px 250px white,
+    350px 450px white,
+    550px 150px white,
+    750px 650px white,
+    950px 350px white;
+  animation-duration: 8s;
+}
+
+.stars3::after {
+  opacity: 0.35;
+  box-shadow:
+    200px 300px white,
+    400px 500px white,
+    600px 200px white,
+    800px 700px white;
+  animation-duration: 10s;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Keep content above stars */
+.hero,
+.navbar,
+.page-container {
+  position: relative;
+  z-index: 2;
+}
 
 
 html, body {
   height: 100%;
   overflow-x: hidden; /* prevent horizontal scroll from stars */
-  /* optional: if you want truly fixed page */
+  overflow-y: hidden; /* optional: if you want truly fixed page */
   margin: 0;
   padding: 0;
 }
 
-/*.stars, .stars2, .stars3 {
+.stars, .stars2, .stars3 {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;  prevent them from adding scroll 
-}*/
-
-/* ===== tsParticles Background ===== */
-#tsparticles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
+  overflow: hidden; /* prevent them from adding scroll */
 }
 
-/* Make sure content is above stars */
-.navbar,
-.hero {
-  position: relative;
-  z-index: 2;
+.stars::after, .stars2::after, .stars3::after {
+  border-radius: 50%;
+  width: 1.5px;
+  height: 1.5px;
 }
