@@ -328,6 +328,8 @@ section.visible {
 /* About + Quote layout */
 #about-section {
   position: relative;
+  align-items: flex-start; /* instead of center */
+  padding-top: 80px;       /* adjust as needed */
 }
 
 #about-text {
@@ -340,8 +342,11 @@ section.visible {
 #quote-container {
   flex: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding-left: 5%;
+  padding: 0; /* remove left padding */
 }
 
 #quote-container::before {
@@ -353,7 +358,7 @@ section.visible {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background: rgba(100, 201, 255, 0.324);
+  background: rgba(100, 201, 255, 0.333); /* slightly lighter for visibility */
   z-index: -1;
 }
 
