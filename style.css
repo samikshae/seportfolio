@@ -227,9 +227,9 @@ body {
 
 .orbit-text text {
   fill: #64ffda; /* blue accent */
-  font-size: 16px;
-  letter-spacing: 4px;
-  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: 5px;
+  font-weight: 520;
 }
 
 @keyframes rotateText {
