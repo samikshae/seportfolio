@@ -339,14 +339,18 @@ section.visible {
   line-height: 1.6;
 }
 
-#quote-container {
-  flex: 1;
-  position: relative;
+#quote-wrapper {
+  flex: 1; /* optional, keeps space on the right */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* horizontally center the quote */
+  align-items: center;     /* vertically center */
+  position: relative;
+}
+
+#quote-container {
+  position: relative;      /* for circle positioning */
   text-align: center;
-  padding: 0; /* remove left padding */
+  padding: 0;              /* remove extra padding */
 }
 
 #quote-container::before {
@@ -358,7 +362,7 @@ section.visible {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background: rgba(100, 201, 255, 0.191); /* slightly lighter for visibility */
+  background: rgba(100, 201, 255, 0.15);
   z-index: -1;
 }
 
@@ -368,6 +372,7 @@ section.visible {
   font-size: 1.2rem;
   line-height: 1.5;
 }
+
 
 /* Skills section */
 #skills-section {
