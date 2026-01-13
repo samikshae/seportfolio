@@ -124,7 +124,9 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #64ffda;
-  box-shadow: 0 0 18px rgba(100, 255, 218, 0.35);
+  box-shadow:
+    0 0 12px rgba(100, 255, 218, 0.25),
+    0 0 24px rgba(100, 255, 218, 0.15);
   animation: glowPulse 4s ease-in-out infinite;
 }
 
@@ -201,7 +203,7 @@ body {
   object-fit: cover;
   border: 4px solid #64ffda;
   z-index: 2; /* stays above orbit */
-  animation: glowPulse 4.5s ease-in-out infinite;
+  animation: glowPulse 4.7s ease-in-out infinite;
 }
 }
 
@@ -255,13 +257,13 @@ body {
 @keyframes glowPulse {
   0%, 100% {
     box-shadow:
-      0 0 18px rgba(100, 255, 218, 0.35),
-      0 0 36px rgba(100, 255, 218, 0.15);
+      0 0 12px rgba(100, 255, 218, 0.25),
+      0 0 24px rgba(100, 255, 218, 0.15);
   }
   50% {
     box-shadow:
-      0 0 26px rgba(100, 255, 218, 0.5),
-      0 0 52px rgba(100, 255, 218, 0.25);
+      0 0 18px rgba(100, 255, 218, 0.35),
+      0 0 36px rgba(100, 255, 218, 0.2);
   }
 }
 
@@ -280,54 +282,41 @@ body {
 
 .stars::after {
   content: "";
-  opacity: 0.6;
   position: absolute;
   width: 2px;
   height: 2px;
   background: white;
   box-shadow:
-    100px 200px white,
-    200px 400px white,
-    300px 100px white,
-    400px 600px white,
-    500px 300px white,
-    600px 700px white,
-    700px 200px white,
-    800px 500px white,
-    900px 100px white,
-    1000px 600px white,
-    1100px 300px white,
-    1200px 700px white,
-    1300px 200px white,
-    1400px 500px white,
-    1500px 100px white,
-    1600px 600px white,
-    1700px 300px white,
-    1800px 700px white;
-  animation: twinkle 7s ease-in-out infinite;
-  opacity: 0.6;
+    100px 200px white, 200px 400px white, 300px 100px white, 400px 600px white,
+    500px 300px white, 600px 700px white, 700px 200px white, 800px 500px white,
+    900px 100px white, 1000px 600px white, 1100px 300px white, 1200px 700px white,
+    1300px 200px white, 1400px 500px white, 1500px 100px white, 1600px 600px white,
+    1700px 300px white, 1800px 700px white, 1900px 400px white, 2000px 500px white,
+    2100px 300px white, 2200px 600px white;
+  animation: twinkle 8s ease-in-out infinite;
+  opacity: 0.5;
 }
 
-
 .stars2::after {
-  opacity: 0.45;
+  opacity: 0.35;
   box-shadow:
-    150px 250px white,
-    350px 450px white,
-    550px 150px white,
-    750px 650px white,
-    950px 350px white;
-  animation-duration: 8s;
+    150px 250px white, 350px 450px white, 550px 150px white, 750px 650px white,
+    950px 350px white, 1150px 500px white, 1350px 250px white;
+  animation-duration: 10s;
 }
 
 .stars3::after {
-  opacity: 0.35;
+  opacity: 0.25;
   box-shadow:
-    200px 300px white,
-    400px 500px white,
-    600px 200px white,
-    800px 700px white;
-  animation-duration: 10s;
+    200px 300px white, 400px 500px white, 600px 200px white, 800px 700px white,
+    1000px 400px white, 1200px 600px white;
+  animation-duration: 12s;
+}
+
+.stars::after, .stars2::after, .stars3::after {
+  border-radius: 50%;
+  width: 1.5px;
+  height: 1.5px;
 }
 
 @keyframes twinkle {
@@ -340,4 +329,21 @@ body {
 .page-container {
   position: relative;
   z-index: 2;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll from stars */
+  overflow-y: hidden; /* optional: if you want truly fixed page */
+  margin: 0;
+  padding: 0;
+}
+
+.stars, .stars2, .stars3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* prevent them from adding scroll */
 }
