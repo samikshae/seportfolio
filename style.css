@@ -352,5 +352,5 @@ html, body {
 #tsparticles {
   position: fixed;
   inset: 0;
-  z-index: -1;     /* behind everything */
+  z-index: -1;
 }
