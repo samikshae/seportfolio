@@ -281,24 +281,37 @@ body {
 
 .stars::after {
   content: "";
+  opacity: 0.6;
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 2px;
+  height: 2px;
   background: white;
   box-shadow:
     100px 200px white,
-    300px 400px white,
-    500px 100px white,
-    700px 600px white,
-    900px 300px white,
-    1100px 700px white,
+    200px 400px white,
+    300px 100px white,
+    400px 600px white,
+    500px 300px white,
+    600px 700px white,
+    700px 200px white,
+    800px 500px white,
+    900px 100px white,
+    1000px 600px white,
+    1100px 300px white,
+    1200px 700px white,
     1300px 200px white,
-    1500px 500px white,
-    1700px 100px white;
-  animation: twinkle 6s infinite ease-in-out;
+    1400px 500px white,
+    1500px 100px white,
+    1600px 600px white,
+    1700px 300px white,
+    1800px 700px white;
+  animation: twinkle 7s ease-in-out infinite;
+  opacity: 0.6;
 }
 
+
 .stars2::after {
+  opacity: 0.45;
   box-shadow:
     150px 250px white,
     350px 450px white,
@@ -309,6 +322,7 @@ body {
 }
 
 .stars3::after {
+  opacity: 0.35;
   box-shadow:
     200px 300px white,
     400px 500px white,
@@ -318,8 +332,8 @@ body {
 }
 
 @keyframes twinkle {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 0.8; }
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
 }
 
 .hero,
