@@ -38,29 +38,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }, animationDuration);
 });
 
-function generateStars(selector, count) {
-  const element = document.querySelector(selector);
+// ==================== STARFIELD ====================
+function generateStars(layerSelector, count, minSize, maxSize) {
+  const layer = document.querySelector(layerSelector);
+  layer.innerHTML = ""; // clear old stars
+
   const width = window.innerWidth;
   const height = window.innerHeight;
 
-  let shadows = [];
   for (let i = 0; i < count; i++) {
-    const x = Math.floor(Math.random() * width);
-    const y = Math.floor(Math.random() * height);
-    shadows.push(`${x}px ${y}px white`);
+    const star = document.createElement("div");
+    star.classList.add("star");
+    const size = Math.random() * (maxSize - minSize) + minSize;
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left = `${Math.random() * width}px`;
+    star.style.top = `${Math.random() * height}px`;
+    layer.appendChild(star);
   }
-  element.style.boxShadow = shadows.join(', ');
 }
 
-// Generate stars for all layers
+// Initialize all layers
 function initStars() {
-  generateStars('.stars', 300);   // Layer 1: small bright stars
-  generateStars('.stars2', 200);  // Layer 2: medium stars
-  generateStars('.stars3', 150);  // Layer 3: big stars
+  generateStars('.stars', 300, 1, 2);   // small stars
+  generateStars('.stars2', 200, 2, 3);  // medium stars
+  generateStars('.stars3', 150, 3, 4);  // big stars
 }
 
-// Initialize on page load
+// Initialize on load and resize
 window.addEventListener("load", initStars);
-
-// Re-generate stars when window is resized
 window.addEventListener("resize", initStars);

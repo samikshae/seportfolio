@@ -281,37 +281,24 @@ body {
   background: transparent;
 }
 
-.stars::after,
-.stars2::after,
-.stars3::after {
-  content: "";
+/* common star style */
+.star {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: 2px;
   background: white;
   border-radius: 50%;
-  box-shadow: 0 0 white; /* JS will populate */
-  animation: twinkle 8s ease-in-out infinite;
-  opacity: 0.4;
+  opacity: 0.3;
+  animation: twinkle 5s ease-in-out infinite;
 }
 
-/* Layer-specific differences */
-.stars2::after { animation-duration: 10s; opacity: 0.3; width: 2.5px; height: 2.5px; }
-.stars3::after { animation-duration: 12s; opacity: 0.25; width: 3px; height: 3px; }
+.stars2 .star { opacity: 0.25; animation-duration: 7s; }
+.stars3 .star { opacity: 0.2; animation-duration: 9s; }
 
 @keyframes twinkle {
   0%, 100% { opacity: 0.3; }
   50% { opacity: 0.8; }
 }
 
-/* Mobile scaling */
+/* mobile scaling */
 @media screen and (max-width: 768px) {
-  .stars::after,
-  .stars2::after,
-  .stars3::after {
-    transform: scale(0.5);
-  }
+  .star { transform: scale(0.5); }
 }
-
