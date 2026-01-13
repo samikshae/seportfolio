@@ -325,17 +325,12 @@ body {
 }
   */
 
-.hero,
-.navbar,
-.page-container {
-  position: relative;
-  z-index: 2;
-}
+
 
 html, body {
   height: 100%;
   overflow-x: hidden; /* prevent horizontal scroll from stars */
-  overflow-y: hidden; /* optional: if you want truly fixed page */
+  /* optional: if you want truly fixed page */
   margin: 0;
   padding: 0;
 }
@@ -349,8 +344,20 @@ html, body {
   overflow: hidden;  prevent them from adding scroll 
 }*/
 
+/* ===== tsParticles Background ===== */
 #tsparticles {
   position: fixed;
-  inset: 0;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Make sure content is above stars */
+.navbar,
+.hero {
+  position: relative;
+  z-index: 2;
 }
