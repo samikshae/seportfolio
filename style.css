@@ -269,3 +269,65 @@ body {
       0 0 40px rgba(100, 255, 218, 0.2);
   }
 }
+
+/* STARFIELD BACKGROUND */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  box-shadow:
+    100px 200px white,
+    300px 400px white,
+    500px 100px white,
+    700px 600px white,
+    900px 300px white,
+    1100px 700px white,
+    1300px 200px white,
+    1500px 500px white,
+    1700px 100px white;
+  animation: twinkle 6s infinite ease-in-out;
+}
+
+.stars2::after {
+  box-shadow:
+    150px 250px white,
+    350px 450px white,
+    550px 150px white,
+    750px 650px white,
+    950px 350px white;
+  animation-duration: 8s;
+}
+
+.stars3::after {
+  box-shadow:
+    200px 300px white,
+    400px 500px white,
+    600px 200px white,
+    800px 700px white;
+  animation-duration: 10s;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+}
+
+.hero,
+.navbar,
+.page-container {
+  position: relative;
+  z-index: 2;
+}
