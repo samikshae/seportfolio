@@ -55,9 +55,9 @@ function generateStars(selector, count) {
 
 // Generate stars for all layers
 function initStars() {
-  generateStars('.stars', 275);   // Layer 1: small bright stars
-  generateStars('.stars2', 100);  // Layer 2: medium stars
-  generateStars('.stars3', 50);  // Layer 3: big stars
+  generateStars('.stars', 255);   // Layer 1: small bright stars
+  generateStars('.stars2', 75);  // Layer 2: medium stars
+  generateStars('.stars3', 40);  // Layer 3: big stars
 }
 
 // Initialize on page load
