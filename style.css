@@ -337,7 +337,7 @@ section.visible {
   padding-right: 5%;
   font-size: 1.1rem;
   line-height: 1.6;
-  transform: translateY(-3px);
+  transform: translateY(10px);
 }
 
 #quote-wrapper {
@@ -359,7 +359,7 @@ section.visible {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translateY(50px);
+  transform: translate(-50%, -50%) translateY(90px);
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -372,7 +372,7 @@ section.visible {
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.5;
-  transform: translateY(50px);
+  transform: translateY(90px);
 }
 
 
