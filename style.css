@@ -309,7 +309,7 @@ body {
 }
 
 /* Sections fade-in on scroll */
-section:not(#skills-section) {
+section {
   padding: 120px 10%;
   min-height: auto;
   display: flex;
@@ -324,6 +324,7 @@ section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 /* About + Quote layout */
@@ -509,4 +510,11 @@ section.visible {
 .always-visible {
   opacity: 1 !important;
   transform: none !important;
+}
+
+.skillset-title {
+  text-align: center;
+  margin-top: -40px;
+  margin-bottom: 80px;
+  font-size: 35px;
 }
