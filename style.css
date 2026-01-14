@@ -395,3 +395,41 @@ section.visible {
   }
 
 }
+
+/* ===== SKILLS CATEGORIES ===== */
+
+.skills-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.skill-category {
+  background: rgba(2, 12, 27, 0.6);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: left;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.skill-category.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-category h3 {
+  color: #64ffda;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.skill-category p {
+  color: #a8b2d1;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
