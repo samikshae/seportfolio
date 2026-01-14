@@ -69,15 +69,24 @@ window.addEventListener("resize", initStars);
 // Fade in sections on scroll
 const sections = document.querySelectorAll('section');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.2 });
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
 
-sections.forEach(section => {
+// Observe sections
+document.querySelectorAll("section").forEach(section => {
   observer.observe(section);
 });
 
+// Observe skill cards individually (stagger effect)
+document.querySelectorAll(".skill-card").forEach((card, index) => {
+  card.style.transitionDelay = `${index * 0.12}s`;
+  observer.observe(card);
+});
