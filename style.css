@@ -309,22 +309,22 @@ body {
 }
 
 /* Sections fade-in on scroll */
-section {
+section:not(#skills-section) {
   padding: 120px 10%;
-  min-height: auto; /* IMPORTANT */
+  min-height: auto;
   display: flex;
-  align-items: flex-start; /* align to top */
+  align-items: flex-start;
   justify-content: space-between;
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
 }
 
-
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 /* About + Quote layout */
 #about-section {
@@ -399,7 +399,7 @@ section.visible {
 /* ===== SKILLS CATEGORIES ===== */
 
 .skills-wrapper {
-  max-width: 1300px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
