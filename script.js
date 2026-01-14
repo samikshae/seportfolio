@@ -90,3 +90,7 @@ document.querySelectorAll(".skill-card").forEach((card, index) => {
   card.style.transitionDelay = `${index * 0.12}s`;
   observer.observe(card);
 });
+
+document.querySelectorAll(".skill-category").forEach(el => {
+  observer.observe(el);
+});
