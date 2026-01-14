@@ -94,3 +94,5 @@ document.querySelectorAll(".skill-card").forEach((card, index) => {
 document.querySelectorAll(".skill-category").forEach(el => {
   observer.observe(el);
 });
+
+// Ob
