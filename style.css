@@ -406,11 +406,18 @@ section.visible {
   gap: 48px;
 }
 
+#skills-section {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== SKILLS CENTERED BUBBLES ===== */
+
 .skill-category {
   background: rgba(2, 12, 27, 0.6);
-  border-radius: 16px;
-  padding: 32px;
-  text-align: left;
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: center;
 
   opacity: 0;
   transform: translateY(40px);
@@ -424,12 +431,54 @@ section.visible {
 
 .skill-category h3 {
   color: #64ffda;
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+  font-size: 1.35rem;
+  margin-bottom: 24px;
 }
 
-.skill-category p {
-  color: #a8b2d1;
-  font-size: 1.05rem;
-  line-height: 1.6;
+/* bubble container */
+.skill-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* bubbles */
+.skill-bubbles span {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ccd6f6;
+
+  background: rgba(100, 255, 218, 0.12);
+  border: 1px solid rgba(100, 255, 218, 0.25);
+
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    background 0.25s ease;
+}
+
+/* reveal bubbles on scroll */
+.skill-category.visible .skill-bubbles span {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* stagger */
+.skill-bubbles span:nth-child(1) { transition-delay: 0.05s; }
+.skill-bubbles span:nth-child(2) { transition-delay: 0.10s; }
+.skill-bubbles span:nth-child(3) { transition-delay: 0.15s; }
+.skill-bubbles span:nth-child(4) { transition-delay: 0.20s; }
+.skill-bubbles span:nth-child(5) { transition-delay: 0.25s; }
+
+/* hover */
+.skill-bubbles span:hover {
+  background: rgba(100, 255, 218, 0.25);
+  color: #64ffda;
+  transform: translateY(-2px) scale(1.03);
 }
