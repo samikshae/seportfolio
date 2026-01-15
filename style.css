@@ -750,17 +750,20 @@ section.visible {
 
 .project-detail-video {
   width: 100%;
-  max-width: 1100px;
-  margin: 2rem auto;
+  max-width: 900px;   /* smaller than PDFs */
+  margin: 2.5rem auto;
+  display: flex;
+  justify-content: center;
   position: relative;
   z-index: 3;
 }
 
 .project-detail-video video {
   width: 100%;
-  height: 75vh;
+  height: auto;
+  max-height: 65vh;   /* caps vertical size */
   border-radius: 12px;
-  display: block;
   object-fit: contain;
   background: black;
 }
+
