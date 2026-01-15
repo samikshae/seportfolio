@@ -548,7 +548,12 @@ section.visible {
   z-index: 1;
 }
 
-
+.projects-grid section {
+  padding: 0;
+  display: block;
+  justify-content: unset;
+  align-items: unset;
+}
 
 /* ================= PROJECT CARD ================= */
 
