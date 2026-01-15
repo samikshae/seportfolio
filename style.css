@@ -536,13 +536,18 @@ section.visible {
 .projects-grid {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 40px 80px; /* MUCH tighter */
+  padding: 0 40px 80px; /* NO TOP PADDING */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px 32px; /* row gap, column gap */
+
+  /* tighter vertical spacing */
+  row-gap: 18px;
+  column-gap: 35px;
+
   position: relative;
   z-index: 1;
 }
+
 
 
 /* ================= PROJECT CARD ================= */
@@ -596,16 +601,19 @@ section.visible {
 }
 
 .projects-header {
-  text-align: center;
   max-width: 700px;
-  margin: 120px auto 20px; /* centers + pulls grid closer */.project-info {
-  padding: 20px 22px 22px;
+  margin: 120px auto 32px; /* top | left/right | bottom */
+  text-align: center;
+
+  /* override section-like spacing */
+  padding: 0;
+  display: block;
 }
 
 .project-info p {
   margin-bottom: 14px;
 }
-}
+
 
 .projects-header h1 {
   font-size: 2.8rem;
@@ -614,9 +622,10 @@ section.visible {
 }
 
 .projects-header p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #a8b2d1;
   line-height: 1.6;
+  font-weight: 250;
 }
 
 
