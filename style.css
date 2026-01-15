@@ -533,33 +533,46 @@ section.visible {
 
 /* ================= PROJECTS PAGE ================= */
 
-.projects-container {
-  max-width: 1100px;
+.projects-grid {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 140px 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 48px;
   position: relative;
   z-index: 1;
 }
 
+/* ================= PROJECT CARD ================= */
+
 .project-card {
-  margin-bottom: 100px;
+  width: 100%;
 }
 
 .project-link {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
-  background: rgba(2, 12, 27, 0.65);
-  border-radius: 18px;
-  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(2, 12, 27, 0.7);
+  border-radius: 20px;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.project-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* ================= IMAGE ================= */
 
 .project-image {
   position: relative;
+  width: 100%;
+  height: 230px;
   overflow: hidden;
-  border-radius: 14px;
 }
 
 .project-image img {
@@ -568,65 +581,52 @@ section.visible {
   object-fit: cover;
 }
 
+/* Year badge */
 .project-year {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
   background: #64ffda;
   color: #020c1b;
   padding: 6px 12px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   border-radius: 999px;
 }
 
-.project-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 12px;
+/* ================= TEXT ================= */
+
+.project-info {
+  padding: 24px 22px 28px;
 }
 
-.project-content p {
+.project-info h2 {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+
+.project-info p {
   color: #a8b2d1;
+  font-size: 0.95rem;
   margin-bottom: 18px;
 }
 
 .read-more {
   color: #64ffda;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
-/* ================= PROJECT DETAIL PAGE ================= */
+/* ================= RESPONSIVE ================= */
 
-.project-detail-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 140px 40px;
-  position: relative;
-  z-index: 1;
+@media (max-width: 1000px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
 }
 
-.back-button {
-  display: inline-block;
-  margin-bottom: 32px;
-  color: #64ffda;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.project-year-text {
-  color: #8892b0;
-  margin-bottom: 24px;
-}
-
-.project-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 40px;
-}
-
-.project-detail-page iframe {
-  width: 100%;
-  height: 480px;
-  border: none;
-  border-radius: 14px;
+@media (max-width: 650px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
 }
