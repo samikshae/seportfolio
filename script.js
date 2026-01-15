@@ -94,3 +94,12 @@ document.querySelectorAll(".skill-card").forEach((card, index) => {
 document.querySelectorAll(".skill-category").forEach(el => {
   observer.observe(el);
 });
+
+// Expand project details
+document.querySelectorAll(".read-more").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = document.getElementById(btn.dataset.target);
+    target.style.display =
+      target.style.display === "block" ? "none" : "block";
+  });
+});
