@@ -752,11 +752,15 @@ section.visible {
   width: 100%;
   max-width: 1100px;
   margin: 2rem auto;
+  position: relative;
+  z-index: 3;
 }
 
 .project-detail-video video {
   width: 100%;
-  height: 75vh;        /* same relative height as PDF */
-  border-radius: 12px; /* same rounded corners */
+  height: 75vh;
+  border-radius: 12px;
   display: block;
+  object-fit: contain;
+  background: black;
 }
