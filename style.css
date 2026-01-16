@@ -826,7 +826,9 @@ section.visible {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  align-items: center; /* center pills */
 }
+
 
 .social-link {
   display: flex;
@@ -863,6 +865,9 @@ section.visible {
   font-size: 0.9rem;
   color: #ccd6f6;
   transition: all 0.25s ease;
+  width: fit-content;          /* stops full width */
+  min-width: 220px;            /* consistent size */
+  justify-content: center;     /* center icon + text */
 }
 
 .social-links a:hover {
